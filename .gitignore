@@ -22,3 +22,4 @@ vite.config.ts.timestamp-*
 extensions_support/
 
 .pnpm-store
+dist/

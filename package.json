@@ -80,7 +80,7 @@
 	"dependencies": {
 		"@hk/photographer-toolbox": "npm:@jsr/hk__photographer-toolbox@^0.1.8",
 		"@iconify/svelte": "^4.0.2",
-		"@kksh/api": "^0.0.48",
+		"@kksh/api": "^0.0.52",
 		"@kksh/svelte5": "^0.1.9",
 		"@tanstack/table-core": "^8.20.5",
 		"clsx": "^2.1.1",
