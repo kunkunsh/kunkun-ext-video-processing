@@ -1,0 +1,134 @@
+{
+	"$schema": "https://schema.kunkun.sh",
+	"name": "kunkun-ext-video-processing",
+	"version": "0.0.7",
+	"repository": "https://github.com/kunkunsh/kunkun-ext-video-processing",
+	"kunkun": {
+		"name": "Video Processing",
+		"shortDescription": "Video Info, Conversion and more",
+		"longDescription": "Video conversion, compression, and more",
+		"identifier": "video-processing",
+		"icon": {
+			"type": "iconify",
+			"value": "mingcute:video-fill"
+		},
+		"demoImages": [],
+		"permissions": [
+			"clipboard:read-files",
+			"system:fs",
+			"notification:all",
+			"dialog:all",
+			"event:drag-drop",
+			{
+				"permission": "shell:deno:spawn",
+				"allow": [
+					{
+						"path": "$EXTENSION/deno-src/index.ts",
+						"env": "*",
+						"ffi": "*",
+						"read": "*",
+						"sys": "*",
+						"run": "*"
+					}
+				]
+			},
+			"shell:stdin-write",
+			"shell:kill",
+			{
+				"permission": "shell:execute",
+				"allow": [
+					{
+						"cmd": {
+							"program": "ffprobe",
+							"args": [
+								"--help"
+							]
+						}
+					}
+				]
+			}
+		],
+		"customUiCmds": [
+			{
+				"main": "/",
+				"dist": "build",
+				"devMain": "http://localhost:5173",
+				"name": "Video Conversion",
+				"cmds": []
+			}
+		],
+		"templateUiCmds": [
+			{
+				"name": "Video Info",
+				"main": "dist/video-info.js",
+				"cmds": []
+			}
+		]
+	},
+	"scripts": {
+		"dev": "vite dev",
+		"dev:template": "bun scripts/build-template-ext.ts dev",
+		"build:template": "bun scripts/build-template-ext.ts",
+		"build:custom": "vite build",
+		"build": "bun scripts/build.ts",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write ."
+	},
+	"dependencies": {
+		"@hk/photographer-toolbox": "npm:@jsr/hk__photographer-toolbox@^0.1.8",
+		"@iconify/svelte": "^4.0.2",
+		"@kksh/api": "^0.0.48",
+		"@kksh/svelte5": "^0.1.9",
+		"@tanstack/table-core": "^8.20.5",
+		"clsx": "^2.1.1",
+		"embla-carousel-svelte": "^8.3.1",
+		"filesize": "^10.1.6",
+		"lucide-svelte": "^0.416.0",
+		"mode-watcher": "^0.4.0",
+		"paneforge": "^0.0.6",
+		"svelte-radix": "^2.0.1",
+		"svelte-sonner": "^0.3.28",
+		"tailwind-merge": "^2.4.0",
+		"tailwind-variants": "^0.2.1",
+		"valibot": "^0.42.1",
+		"vaul-svelte": "^0.3.2"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^3.3.1",
+		"@sveltejs/adapter-static": "^3.0.6",
+		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^4.0.0",
+		"@tailwindcss/typography": "^0.5.13",
+		"@types/eslint": "^9.6.0",
+		"autoprefixer": "^10.4.19",
+		"bits-ui": "1.0.0-next.54",
+		"eslint": "^9.0.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-svelte": "^2.36.0",
+		"formsnap": "2.0.0-next.1",
+		"globals": "^15.0.0",
+		"postcss": "^8.4.38",
+		"prettier": "^3.1.1",
+		"prettier-plugin-svelte": "^3.1.2",
+		"prettier-plugin-tailwindcss": "^0.6.4",
+		"svelte": "^5.0.0",
+		"svelte-check": "^4.0.0",
+		"sveltekit-superforms": "^2.20.0",
+		"tailwindcss": "^3.4.4",
+		"typescript": "^5.0.0",
+		"typescript-eslint": "^8.0.0-alpha.20",
+		"vite": "^5.0.3",
+		"zod": "^3.23.8"
+	},
+	"type": "module",
+	"files": [
+		"build",
+		"dist",
+		"deno-src",
+		".gitignore"
+	],
+	"packageManager": "pnpm@9.15.3"
+}
