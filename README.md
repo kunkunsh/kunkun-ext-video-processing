@@ -1,5 +1,10 @@
 # Kunkun Custom UI Extension Template (SvelteKit)
 
+## Features
+
+- Video Conversion
+
+
 ```ts
 export type ProcessVideoOptions = {
 	resizePercentage?: number;
