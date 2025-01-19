@@ -2,7 +2,7 @@
 	"$schema": "https://schema.kunkun.sh",
 	"license": "MIT",
 	"name": "kunkun-ext-video-processing",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"repository": "https://github.com/kunkunsh/kunkun-ext-video-processing",
 	"kunkun": {
 		"name": "Video Processing",
@@ -13,7 +13,10 @@
 			"type": "iconify",
 			"value": "mingcute:video-fill"
 		},
-		"demoImages": [],
+		"demoImages": [
+			"https://i.imgur.com/imtXN2D.png",
+			"https://i.imgur.com/qhr7c7b.png"
+		],
 		"permissions": [
 			"clipboard:read-files",
 			"system:fs",

@@ -1,45 +1,12 @@
-# Kunkun Custom UI Extension Template (SvelteKit)
+# Kunkun Extension Video Processing
+
+- NPM: https://www.npmjs.com/package/kunkun-ext-video-processing
+- Store: https://kunkun.sh/store/video-processing
 
 ## Features
 
 - Video Conversion
+- Video Info
 
-
-```ts
-export type ProcessVideoOptions = {
-	resizePercentage?: number;
-	size?: string;
-	aspectRatio?: string;
-	videoCodec?: string;
-	audioCodec?: string;
-	format?: string;
-	outputOptions?: string[];
-	audioFilters?: string[];
-	noAudio?: boolean;
-	takeFrames?: number;
-	noVideo?: boolean;
-	autopad?: {
-		pad?: boolean;
-		color?: string;
-	};
-	audioQuality?: number;
-	fps?: number;
-	preset?:
-		| 'ultrafast'
-		| 'superfast'
-		| 'veryfast'
-		| 'faster'
-		| 'fast'
-		| 'medium'
-		| 'slow'
-		| 'slower'
-		| 'veryslow';
-	startTime?: string | number;
-	duration?: string | number;
-	audioBitrate?: number;
-	videoBitrate?: number;
-	audioChannels?: number;
-	ffprobePath?: string;
-	ffmpegPath?: string;
-};
-```
+![](https://i.imgur.com/imtXN2D.png)
+![](https://i.imgur.com/qhr7c7b.png)
