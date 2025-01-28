@@ -20,7 +20,14 @@
 		/>
 	</div>
 	<div class="flex gap-1">
-		<Input id={name} {name} disabled={!enabled} class="grow" bind:value={startTime} placeholder="e.g. 134.5 or 2:14.500" />
+		<Input
+			id={name}
+			{name}
+			disabled={!enabled}
+			class="grow"
+			bind:value={startTime}
+			placeholder="e.g. 134.5 or 2:14.500"
+		/>
 		<EnableButton bind:enabled />
 	</div>
 </div>

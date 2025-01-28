@@ -1,4 +1,4 @@
-import { shell } from '@kksh/api/ui/iframe';
+import { shell, toast } from '@kksh/api/ui/iframe';
 import type { API } from '../types';
 
 export async function getRpcAPI() {
@@ -22,6 +22,12 @@ export async function getRpcAPI() {
 		},
 		{}
 	);
+	command.stderr.on('data', (data) => {
+		console.warn(data);
+		if (data.includes('Conversion failed!')) {
+			toast.error('Conversion failed!');
+		}
+	});
 	const api = rpcChannel.getAPI();
 	return {
 		api,

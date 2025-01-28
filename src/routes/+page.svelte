@@ -1,17 +1,18 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import { clipboard, notification, shell, ui, toast, event } from '@kksh/api/ui/iframe';
-	import { Button, Label, Progress } from '@kksh/svelte5';
+	import { toast, ui } from '@kksh/api/ui/iframe';
+	import { Label, Progress } from '@kksh/svelte5';
 	import type { ProcessVideoOptions } from '@hk/photographer-toolbox/types';
 	import { Card } from '@kksh/svelte5';
 	import type { ProcessVideoOptions as LocalProcessVideoOptions } from '@/types';
 	import OptionsForm from '@/components/options-form.svelte';
-	import type { API } from '../types';
 	import type { OptionsEnable } from '@/types';
-	import { api } from '@/stores/api';
 	import { verifyFormOptions } from '@/form';
 	import { getRpcAPI } from '@/api';
 	import { onMount } from 'svelte';
+
+	onMount(() => {
+		ui.showBackButton('bottom-right');
+	});
 
 	let options: ProcessVideoOptions = $state({});
 	let progress = $state(0);

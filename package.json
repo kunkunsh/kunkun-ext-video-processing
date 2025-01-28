@@ -2,7 +2,7 @@
 	"$schema": "https://schema.kunkun.sh",
 	"license": "MIT",
 	"name": "kunkun-ext-video-processing",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"repository": "https://github.com/kunkunsh/kunkun-ext-video-processing",
 	"kunkun": {
 		"name": "Video Processing",
@@ -15,13 +15,19 @@
 		},
 		"demoImages": [
 			"https://i.imgur.com/imtXN2D.png",
-			"https://i.imgur.com/qhr7c7b.png"
+			"https://i.imgur.com/qhr7c7b.png",
+			"https://i.imgur.com/YHP96YM.png"
 		],
 		"permissions": [
-			"clipboard:read-files",
-			"system:fs",
-			"notification:all",
 			"dialog:all",
+			{
+				"permission": "fs:exists",
+				"allow": [
+					{
+						"path": "**"
+					}
+				]
+			},
 			"event:drag-drop",
 			{
 				"permission": "shell:deno:spawn",
@@ -58,6 +64,21 @@
 				"dist": "build",
 				"devMain": "http://localhost:5173",
 				"name": "Video Conversion",
+				"window": {
+					"titleBarStyle": "overlay",
+					"hiddenTitle": true
+				},
+				"cmds": []
+			},
+			{
+				"main": "/gif",
+				"dist": "build",
+				"devMain": "http://localhost:5173/gif",
+				"name": "Video to GIF",
+				"window": {
+					"titleBarStyle": "overlay",
+					"hiddenTitle": true
+				},
 				"cmds": []
 			}
 		],
@@ -65,7 +86,10 @@
 			{
 				"name": "Video Info",
 				"main": "dist/video-info.js",
-				"cmds": []
+				"cmds": [],
+				"window": {
+					"hiddenTitle": true
+				}
 			}
 		]
 	},

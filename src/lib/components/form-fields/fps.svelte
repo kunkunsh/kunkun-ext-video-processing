@@ -14,10 +14,7 @@
 <div class={cn('flex flex-col gap-1', className)}>
 	<div class="flex items-center gap-1">
 		<Label for={name} class="font-semibold">FPS</Label>
-		<InfoPopover
-			description="Target Output FPS"
-			class="h-4 w-4"
-		/>
+		<InfoPopover description="Target Output FPS" class="h-4 w-4" />
 	</div>
 	<div class="flex gap-1">
 		<Input
