@@ -2,8 +2,12 @@
 	"$schema": "https://schema.kunkun.sh",
 	"license": "MIT",
 	"name": "kunkun-ext-video-processing",
-	"version": "0.0.10",
+	"version": "0.0.11",
 	"repository": "https://github.com/kunkunsh/kunkun-ext-video-processing",
+	"author": {
+		"name": "Huakun",
+		"url": "https://github.com/huakunshen"
+	},
 	"kunkun": {
 		"name": "Video Processing",
 		"shortDescription": "Video Info, Conversion and more",
