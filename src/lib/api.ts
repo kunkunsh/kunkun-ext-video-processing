@@ -1,4 +1,4 @@
-import { shell, toast } from '@kksh/api/ui/iframe';
+import { shell, toast } from '@kksh/api/ui/custom';
 import type { API } from '../types';
 
 export async function getRpcAPI() {

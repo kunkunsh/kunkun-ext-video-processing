@@ -41,7 +41,7 @@
 	import AudioChannels from './form-fields/audio-channels.svelte';
 	import Autopad from './form-fields/autopad.svelte';
 	import { getRpcAPI } from '@/api';
-	import type { Child } from '@kksh/api/ui/worker';
+	import type { Child } from '@kksh/api/ui/template';
 	import { toast } from 'svelte-sonner';
 
 	let {

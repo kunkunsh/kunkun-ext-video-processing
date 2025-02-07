@@ -32,7 +32,8 @@ jobs:
       - name: Check if version is already published
         run: |
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
-          npm view kunkun-ext-video-processing@$PACKAGE_VERSION
+          PACKAGE_NAME=$(jq -r '.name' package.json)
+          npm view $PACKAGE_NAME@$PACKAGE_VERSION
         continue-on-error: true
         id: check_version
       - name: Publish

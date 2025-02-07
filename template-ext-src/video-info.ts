@@ -16,11 +16,11 @@ import {
 	system,
 	toast,
 	ui,
-	WorkerExtension
-} from '@kksh/api/ui/worker';
+	TemplateUiCommand
+} from '@kksh/api/ui/template';
 import { filesize } from 'filesize';
 
-class VideoInfo extends WorkerExtension {
+class VideoInfo extends TemplateUiCommand {
 	api: API | undefined;
 	apiProcess: Child | undefined;
 	videoMetadata: Record<string, DefaultVideoMetadata> = {};

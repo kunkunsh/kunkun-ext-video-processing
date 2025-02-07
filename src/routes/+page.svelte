@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { toast, ui } from '@kksh/api/ui/iframe';
+	import { toast, ui } from '@kksh/api/ui/custom';
 	import { Label, Progress } from '@kksh/svelte5';
 	import type { ProcessVideoOptions } from '@hk/photographer-toolbox/types';
 	import { Card } from '@kksh/svelte5';

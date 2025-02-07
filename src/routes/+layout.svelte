@@ -4,7 +4,7 @@
 	import { Toaster, ThemeWrapper, updateTheme } from '@kksh/svelte5';
 	import { toast } from 'svelte-sonner';
 	import { onDestroy, onMount } from 'svelte';
-	import { ui, shell } from '@kksh/api/ui/iframe';
+	import { ui, shell } from '@kksh/api/ui/custom';
 	import { api } from '@/stores/api';
 	import { getFFmpegPath } from '@/api';
 

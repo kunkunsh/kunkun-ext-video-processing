@@ -2,7 +2,7 @@
 	import InputFile from '@/components/form-fields/input-file.svelte';
 	import OutputPath from '@/components/form-fields/output-path.svelte';
 	import { Label, Card, Input, Button, Progress } from '@kksh/svelte5';
-	import { toast, fs, dialog, ui } from '@kksh/api/ui/iframe';
+	import { toast, fs, dialog, ui } from '@kksh/api/ui/custom';
 	import { getRpcAPI } from '@/api';
 	import ExplainCard from './ExplainCard.svelte';
 	import { onMount } from 'svelte';

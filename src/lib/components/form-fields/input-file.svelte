@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { cn } from '@/utils';
 	import { Button, Input, Label } from '@kksh/svelte5';
-	import { dialog, event } from '@kksh/api/ui/iframe';
+	import { dialog, event } from '@kksh/api/ui/custom';
 	import { onDestroy, onMount } from 'svelte';
 	let {
 		class: className,

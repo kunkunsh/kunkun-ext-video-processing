@@ -1,7 +1,7 @@
 import { get, writable } from 'svelte/store';
 import type { API } from '../../types';
 import { getRpcAPI } from '@/api';
-import type { Child, DenoCommand } from '@kksh/api/ui/worker';
+import type { Child, DenoCommand } from '@kksh/api/ui/template';
 
 export function createApiStore() {
 	const store = writable<{

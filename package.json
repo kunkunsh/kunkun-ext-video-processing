@@ -2,7 +2,7 @@
 	"$schema": "https://schema.kunkun.sh",
 	"license": "MIT",
 	"name": "kunkun-ext-video-processing",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"repository": "https://github.com/kunkunsh/kunkun-ext-video-processing",
 	"author": {
 		"name": "Huakun",
@@ -112,7 +112,7 @@
 	"dependencies": {
 		"@hk/photographer-toolbox": "npm:@jsr/hk__photographer-toolbox@^0.1.8",
 		"@iconify/svelte": "^4.0.2",
-		"@kksh/api": "^0.0.52",
+		"@kksh/api": "^0.1.1",
 		"@kksh/svelte5": "^0.1.9",
 		"@tanstack/table-core": "^8.20.5",
 		"clsx": "^2.1.1",

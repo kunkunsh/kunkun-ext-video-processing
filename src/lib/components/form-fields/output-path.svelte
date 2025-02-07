@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { cn } from '@/utils';
 	import { Button, Input, Label } from '@kksh/svelte5';
-	import { dialog } from '@kksh/api/ui/iframe';
+	import { dialog } from '@kksh/api/ui/custom';
 	let {
 		class: className,
 		name,

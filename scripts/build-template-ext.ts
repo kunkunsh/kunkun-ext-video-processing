@@ -1,6 +1,6 @@
 import { watch } from 'fs';
 import { join } from 'path';
-import { refreshTemplateWorkerExtension } from '@kksh/api/dev';
+import { refreshTemplateWorkerCommand } from '@kksh/api/dev';
 import { $ } from 'bun';
 
 const entrypoints = ['./template-ext-src/video-info.ts'];
@@ -17,7 +17,7 @@ async function build() {
 			minify: false
 		});
 		if (Bun.argv.includes('dev')) {
-			await refreshTemplateWorkerExtension();
+			await refreshTemplateWorkerCommand();
 		}
 	} catch (error) {
 		console.error(error);
