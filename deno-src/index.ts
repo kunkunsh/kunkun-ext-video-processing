@@ -2,8 +2,6 @@
 import ffmpeg from 'fluent-ffmpeg';
 import type { API } from '../src/types.ts';
 import type { ProcessVideoOptions, Progress } from '@hk/photographer-toolbox/types';
-// ffmpeg.setFfprobePath('/opt/homebrew/bin/ffprobe');
-
 import { video } from '@hk/photographer-toolbox';
 import { expose } from '@kunkun/api/runtime/deno';
 
@@ -60,5 +58,6 @@ expose({
 			endCallback
 		);
 		return Promise.resolve();
-	}
+	},
+	readDefaultVideoMetadata: video.readMainVideoMetadata
 } satisfies API);

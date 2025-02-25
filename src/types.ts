@@ -7,7 +7,7 @@ import type {
 export type API = {
 	// setFfprobePath: (path: string) => void;
 	// setFfmpegPath: (path: string) => void;
-	// readDefaultVideoMetadata: (path: string) => Promise<DefaultVideoMetadata | null>;
+	readDefaultVideoMetadata: (path: string) => Promise<DefaultVideoMetadata | null>;
 	getAvailableCodecsNamesByType: (
 		type: 'video' | 'audio' | 'subtitle' | string,
 		source?: string
